@@ -10,6 +10,6 @@ import Foundation
 public class Errno {
     
     public class func description() -> String {
-        return String(cString: UnsafePointer(strerror(errno)))
+        return String(cString: UnsafeMutablePointer(strerror(errno)))
     }
 }
